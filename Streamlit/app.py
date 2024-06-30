@@ -54,16 +54,26 @@ def get_rag_answer(prompt, chroma_client, duckdb_path):
 
 # Streamlit UI
 def main():
-    st.title("RAG with DuckDB and Chroma DB")
-    
-    st.write(f"Chroma DB Path: {CHROMA_DB_PATH}")
-    st.write(f"DuckDB Path: {DUCKDB_PATH}")
+    # Use HTML and CSS for positioning the headers
+    st.markdown("""
+        <div style="display: flex; justify-content: space-between;">
+            <div style="font-size: large; font-weight: bold;">Business School of Economics and Law</div>
+            <div style="font-size: large; font-weight: bold;">Text, Web and Social Media Analytics Lab</div>
+        </div>
+        <hr style="margin-top: 10px; margin-bottom: 10px;">
+    """, unsafe_allow_html=True)
+
+    st.title("Streamlit app for RAG Project")
     prompt = st.text_input("Enter your question:")
 
     if st.button("Get Answer"):
         chroma_client = load_chroma_db(CHROMA_DB_PATH)
         answer = get_rag_answer(prompt, chroma_client, DUCKDB_PATH)
         st.write("Answer:", answer)
+
+    # Add the names at the bottom
+    st.markdown("***")
+    st.markdown("Developed by: Andrej Uhrin, Yasmin Hilles, Kira Duske, Lydia Wong")
 
 if __name__ == "__main__":
     main()
