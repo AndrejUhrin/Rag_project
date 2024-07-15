@@ -1,3 +1,5 @@
 chroma_db/
 duck_db/
 .env
+RAG_multiple_vector_stores/
+venv/
