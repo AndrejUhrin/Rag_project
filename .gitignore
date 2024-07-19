@@ -3,3 +3,8 @@ duck_db/
 .env
 RAG_multiple_vector_stores/
 venv/
+article_chroma_db/
+entities_chroma_db/
+paragraphs_chroma_db/
+all_info_chroma_db_MISQ/
+RAG_identical_metadata_page_content/all_info_in_page_content_chroma_db_MISQ/
