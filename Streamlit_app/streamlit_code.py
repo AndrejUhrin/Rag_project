@@ -12,7 +12,7 @@ from langchain.retrievers.self_query.base import SelfQueryRetriever
 load_dotenv()
 api_key = os.getenv('GROQ_API_KEY')
 
-# Increase runtime timeout settings
+
 st.set_page_config(page_title="Multi-Database Chatbot", layout="wide")
 st.session_state.run_timeout = 300  
 
