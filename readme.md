@@ -12,11 +12,12 @@ The final RAG used for evaluation is stored in a folder called [RAG_3_vectordb_3
 - **RAG_selquerying_paragraphs:** A RAG that uses paragraphs_chroma_db for retrieving information.
 
 ## How to Run This Code
+1. Firstly in the duck_db folder insert the database isrecon_AIS11.duckdb. We were not able to upload it with our solution, because even after compressing the folder was too big.
 
-1. If the folder does not yet contain the vector databases (article_chroma_db, entities_chroma_db, paragraphs_chroma_db), you need to run the `chroma_db_3_tables_creation` code first. This code creates the three vector databases and stores them in the folder `RAG_3_vectordb_3_separate_codes`. If this folder already contains these vector databases, you can skip this step.
-2. Once the vector databases are created, you can run these notebooks: `RAG_selquerying_articles`, `RAG_selquerying_entities`, `RAG_selquerying_paragraphs`.
+2. If the folder does not yet contain the vector databases (article_chroma_db, entities_chroma_db, paragraphs_chroma_db), you need to run the `chroma_db_3_tables_creation` code first. This code creates the three vector databases and stores them in the folder `RAG_3_vectordb_3_separate_codes`. If this folder already contains these vector databases, you can skip this step. If there are any errors during connecting or using vector database as a retriever, you can just delete them and recreate them again with running this code: `chroma_db_3_tables_creation`.
+3. Once the vector databases are created, you can run these notebooks: `RAG_selquerying_articles`, `RAG_selquerying_entities`, `RAG_selquerying_paragraphs`.
    - These codes use the Groq API key for the LLM model, which you need to obtain from the Groq website (it's free). Store this key in a `.env` file. You can get this API key by following this tutorial: [Groq API Key Tutorial](https://www.youtube.com/watch?v=VmNhDUKMHd4&list=LL&index=1)
-3. If you want to ask a new question to RAG, simply create a new cell following this format:
+4. If you want to ask a new question to RAG, simply create a new cell following this format:
    ```python
    query = "here input your question"
    result = qa({"query": query})
