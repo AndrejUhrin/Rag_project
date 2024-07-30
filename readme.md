@@ -22,7 +22,7 @@ The final RAG used for evaluation is stored in a folder called [RAG_3_vectordb_3
    result = qa({"query": query})
    print("Answer:", result["result"])
 
-Additional code related to the folder [RAG_3_vectordb_3_separate_codes](RAG_3_vectordb_3_separate_codes) is in the folder [Streamlit app](Streamlit app), which serves a has the same functionality, but it is a interface created with Stremlit that can be run locally.
+Additional code related to the folder [RAG_3_vectordb_3_separate_codes](RAG_3_vectordb_3_separate_codes) is in the folder [Streamlit_app](Streamlit_app), which serves a has the same functionality, but it is a interface created with Stremlit that can be run locally.
 
 ## Folders with Previous Approaches
 
