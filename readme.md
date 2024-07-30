@@ -1,3 +1,4 @@
+Github repository link: (https://github.com/AndrejUhrin/Rag_project)
 In this project, we have outlined multiple approaches to create a RAG. All these approaches are documented in this folder. Here, we will explain which approach was used for the final validation and which ones were unsuccessful.
 
 The final RAG used for evaluation is stored in a folder called [RAG_3_vectordb_3_separate_codes](RAG_3_vectordb_3_separate_codes). This folder contains the following files:
